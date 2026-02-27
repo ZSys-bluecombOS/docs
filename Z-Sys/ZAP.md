@@ -6,7 +6,7 @@ Source code can be compiled into ZAP's own bytecode format (.zap, as I'm sure yo
 ## Details
 Official implementations will follow this form:
 * Registers
-** 256 "var" registers, which are pointers to data in memory. How the data is stored in memory is not decided yet.
+    * 256 "var" registers, which are pointers to data in memory. How the data is stored in memory is not decided yet.
 
 ## Source code commands
 
