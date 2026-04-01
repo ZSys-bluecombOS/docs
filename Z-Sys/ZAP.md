@@ -15,6 +15,7 @@ Registers:
 
 ## Source code commands
 ### Direct to bytes
+
 | Command | Byte form | Description | Inputs |
 |---|---|---|---|
 | `HALT` | `00` | Stop program (not necessary to written form) | N/A |
@@ -22,7 +23,9 @@ Registers:
 | `SUB` | `02` | Subtract input 2 from input 1 (x - y) | 2 registers |
 | `MUL` | `03` | Multiply input 1 and input 2 | 2 registers |
 | `DIV` | `04` | Divide input 1 by input 2 | 2 registers |
+
 ### Other
+
 | Command | Description |
 |---|---|
 | `ALIAS [original] [new name]` | You can pick a command and a new name that will point to it, like `ALIAS ADD addition` (all caps is not required for the new name). This is moreso a compiler detail, so it won't appear in the compiled form. |
