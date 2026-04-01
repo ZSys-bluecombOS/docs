@@ -10,25 +10,37 @@ They will be written a lot like emulators.
 
 For example, memory will just be a long set of bytes.
 
-Registers are usable in the code, though some mix with some of the higher-level stuff, so unsure if you should really mix them.
+Registers are usable in written code, though some mix with some of the higher-level stuff, so unsure if you should really mix them.
+
+However, the byte form will use these, since, you know, it's supposed to be Assembly-like.
+
 List:
-* T0-T15 - General-purpose temporaries (64-bit)
-* V0-V256 - Variables (yes, like in C and other languages) (these are slots that have 64-bit pointers to data in memory)
+* T0-T15 (0000-000F) - General-purpose temporaries (64-bit)
+* MATH (0010) - Output of math
+* V0-V256 (0100-01FF) - Variables (yes, like in C and other languages) (these are slots that have 64-bit pointers to data in memory)
 
 ## Source code commands
 ### Direct to bytes
 
-| Command | Byte form | Description | Inputs |
-|---|---|---|---|
-| `HALT` | `00` | Stop program (not necessary to written form, but can be used, and in places other than the end of the code) | N/A |
-| `ADD` | `01` | Add input 1 and input 2 (x + y) | 2 registers |
-| `SUB` | `02` | Subtract input 2 from input 1 (x - y) | 2 registers |
-| `MUL` | `03` | Multiply input 1 and input 2 | 2 registers |
-| `DIV` | `04` | Divide input 1 by input 2 | 2 registers |
-| `MOD` | `05` | Modulo input 1 by input 2 (remainder in division) | 2 registers |
-| `LSH` | `06` | Left shift input 1 (ex. 00001100 --> 00011000) | 1 register |
-| `RSH` | `07` | Right shift input 1 (ex. 00001100 --> 00000110) | 1 register |
-| `CMP_EQ` | `10` | Check if 2 values are equal | 2 registers |
+| Command | Byte form | Description |
+|---|---|---|
+| `HALT` | `00` | Stop program (not necessary to written form, but can be used, and in places other than the end of the code) |
+| `ADD [var] [var]` | `01` | Add input 1 and input 2 |
+| `SUB [var] [var]` | `02` | Subtract input 2 from input 1 |
+| `MUL [var] [var]` | `03` | Multiply input 1 and input 2 |
+| `DIV [var] [var]` | `04` | Divide input 1 by input 2 |
+| `MOD [var] [var]` | `05` | Modulo input 1 by input 2 (remainder in division) |
+| `LSH [var] [var]` | `06` | Left shift input 1 (ex. 00001100 --> 00011000) |
+| `RSH [var] [var]` | `07` | Right shift input 1 (ex. 00001100 --> 00000110) |
+| `LSHL [var] [var]` | `08` | Left shift input 1, with looping (ex. 10000000 --> 00000001) |
+| `RSHL [var] [var]` | `09` | Right shift input 1, with looping (ex. 00000011 --> 10000001) |
+| `CMP_EQ [var] [var]` | `10` | Check if input 1 and 2 are equal |
+| `CMP_LT [var] [var]` | `11` | Check if input 1 is less than input 2 |
+| `CMP_GT [var] [var]` | `12` | Check if input 1 is greater than input 2 |
+| `JMP [var]` | `13` | Jump to location |
+| `JMP_IF [var]` | `14` | Jump to location if last CMP was true |
+| `JMP_IF_NOT [var]` | `15` | Jump to location if last CMP was false |
+| `CALL [var]` | `16` | Call another location, like a function |
 
 ### Higher level stuff
 
@@ -38,6 +50,8 @@ List:
 | `FOR_ITEM ([variable name], [list or other iterable]) {...}` | Standard for loop for items in a list |
 | `WHILE ([comparison]) {...}` | Standard while loop (comparison will use CMP_xx as you might guess, ex. `WHILE (CMP_EQ [var 1] [var 2]) {...}` |
 | `SET [variable name] [value]` | Set a value (name can't use spaces) (not completely certain of how this one should work yet) |
+| `FUNCTION [name](...) {...}` | Standard function. |
+| `STRUCT [name](...) {...}` | Ripped straight from C, though with an adjustment: you can set any attribute to be a union of others |
 
 ### Other stuff
 
@@ -49,7 +63,7 @@ List:
 
 ### SYS
 SYS is the system call one and there is a *lot*, so I gave it its own section
-The byte conversions all start with 40
+The byte conversions all start with 40, and byte 2 is a category
 
 | Command | Byte form | Description |
 |---|---|---|
