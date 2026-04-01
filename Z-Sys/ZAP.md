@@ -15,9 +15,8 @@ Registers are usable in written code, though some mix with some of the higher-le
 However, the byte form will use these, since, you know, it's supposed to be Assembly-like.
 
 List:
-* T0-T15 (0000-000F) - General-purpose temporaries (64-bit)
+* T0-T63 (0000-003F) - General-purpose temporaries (64-bit)
 * MATH (0010) - Output of math
-* V0-V256 (0100-01FF) - Variables (yes, like in C and other languages) (these are slots that have 64-bit pointers to data in memory)
 
 ## Source code commands
 ### Direct to bytes
@@ -59,10 +58,11 @@ List:
 |---|---|
 | `ALIAS [original] [new name]` | You can pick a command and a new name that will point to it, like `ALIAS ADD addition` (all caps is not required for the new name). This is moreso a compiler detail, so it won't appear in the compiled form. |
 | `#meta [detail name] "[value]"` | Thing to add metadata like Windows PE and similar things. Spaces are not allowed in the name. Example use: `#meta ProgramName "whatever"`. |
-| `#meta DebugInfo "[value]"` | Not really a separate thing, just works a bit different, so thought it should get its own row. This can store variable names, function names, or labels and their locations in the code, based on how the value is set here.<br>"value" can contain any of "f" (to keep function names), "v" (to keep variable names), or "l" (to keep label names). You can include multiple options. Anything that's not these will be ignored, since it will probably just be based on whether each is present. |
+| `#meta DebugInfo "[value]"` | Not really a separate thing, just works a bit different, so thought it should get its own row. This can store variable names, function names, or labels and their locations in the code, based on how the value is set here.<br>"value" can contain any of "f" (to keep function names), "v" (to keep variable names), "l" (to keep label names), "c" (to keep class and struct names). You can include multiple options. Anything that's not these will be ignored, since it will probably just be based on whether each is present. |
 
 ### SYS
 SYS is the system call one and there is a *lot*, so I gave it its own section
+
 The byte conversions all start with 40, and byte 2 is a category
 
 | Command | Byte form | Description |
