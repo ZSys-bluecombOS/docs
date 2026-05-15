@@ -39,8 +39,8 @@ List:
 | `CMP_LT [var] [var]` | `11` | Check if input 1 is less than input 2 |
 | `CMP_GT [var] [var]` | `12` | Check if input 1 is greater than input 2 |
 | `JMP [var]` | `13` | Jump to location |
-| `JMP_IF [var]` | `14` | Jump to location if last CMP was true |
-| `JMP_IF_NOT [var]` | `15` | Jump to location if last CMP was false |
+| `JMP_IF [var] [loc]` | `14` | Jump to location if value in given register is true|
+| `JMP_IF_NOT [var] [loc]` | `15` | Jump to location if value in given register is false |
 | `CALL [var]` | `16` | Call another location, like a function |
 
 ### Higher level stuff
@@ -58,14 +58,15 @@ List:
 
 | Command | Description |
 |---|---|
-| `ALIAS [original] [new name]` | You can pick a command and a new name that will point to it, like `ALIAS ADD addition` (all caps is not required for the new name). This is moreso a compiler detail, so it won't appear in the compiled form. |
+| `ALIAS [original] [new name]` | You can pick a command and a new name that will point to it, like `ALIAS ADD addition` (all caps is not required for the new name). You can also do something like `ALIAS "ADD a b" "a + b"`. Names for inputs go from lowercase A to lowercase Z. This is moreso a compiler detail, so it won't appear in the compiled form. |
+| `IGNORE [keyword]` | You can pick words and anything else to ignore, ex. `IGNORE PLEASE`. Case sensitive. |
 | `#meta [detail name] "[value]"` | Thing to add metadata like Windows PE and similar things. Spaces are not allowed in the name. Example use: `#meta ProgramName "whatever"`. |
 | `#meta DebugInfo "[value]"` | Not really a separate thing, just works a bit different, so thought it should get its own row. This can store variable names, function names, or labels and their locations in the code, based on how the value is set here.<br>"value" can contain any of "f" (to keep function names), "v" (to keep variable names), "l" (to keep label names), "c" (to keep class and struct names). You can include multiple options. Anything that's not these will be ignored, since it will probably just be based on whether each is present. |
 
 ### SYS
 SYS is the system call one and there is a *lot*, so I gave it its own section
 
-The byte conversions all start with 40, and byte 2 is a category
+The byte conversions all start with 40, and byte 2 is a category.
 
 | Command | Byte form | Description |
 |---|---|---|
