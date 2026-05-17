@@ -8,17 +8,7 @@ Source code can be compiled into ZAP's own bytecode format (.zap, as I'm sure yo
 An app for compiling C to ZAP bytecode may be attempted in the future, possibly along with converters for other Assembly forms (like x86 to ZAP).
 
 ## Details on official implementations
-They will be written a lot like emulators.
-
-For example, memory will just be a long set of bytes.
-
-Registers are usable in written code, though some mix with some of the higher-level stuff, so unsure if you should really mix them.
-
-However, the byte form will use these, since, you know, it's supposed to be Assembly-like.
-
-List:
-* T0-T63 (0000-003F) - General-purpose temporaries (64-bit)
-* MATH (0010) - Output of math
+Pretty much ust emulators.
 
 ## Source code commands
 ### Direct to bytes
@@ -49,10 +39,11 @@ List:
 |---|---|
 | `FOR_RANGE ([variable name], [start], [stop], [step]) {...}` | Standard for loop for ranges |
 | `FOR_ITEM ([variable name], [list or other iterable]) {...}` | Standard for loop for items in a list |
-| `WHILE ([comparison]) {...}` | Standard while loop (comparison will use CMP_xx as you might guess, ex. `WHILE (CMP_EQ [var 1] [var 2]) {...}` |
+| `WHILE ([comparison]) {...}` | Standard while loop (comparison will use CMP_xx as you might guess, ex. `WHILE (CMP_EQ [var 1] [var 2]) {...}`) |
 | `SET [variable name] [value]` | Set a value (name can't use spaces) (not completely certain of how this one should work yet) |
 | `FUNCTION [name](...) {...}` | Standard function. |
 | `STRUCT [name](...) {...}` | Ripped straight from C, though with an adjustment: you can set any attribute to be a union of others |
+| `CLASS [name](...) {...}` | Similar thing, except now you get fucntions. Pretty much what you'd imagine |
 
 ### Other stuff
 
@@ -71,3 +62,4 @@ The byte conversions all start with 40, and byte 2 is a category.
 | Command | Byte form | Description |
 |---|---|---|
 | `SYS.IO.PRINT` | `00 00` | Print byte directly |
+| `SYS.IO.INPUT` | `00 01` | Text input, like Python's |
