@@ -16,7 +16,7 @@ Additionally, if you know me, you might know I like recreating stuff. So yeah, t
 
 * Typical, conventional things, like NES, or Intel 8086,
 * Some perhaps more exotic things, like Zenith Z-100 stuff, Intel Itanium, or some arcade stuff,
-* Some *definitely* more exotic things, like computers from before the 80s, or cable box stuff,
+* Some *definitely* more exotic things, like computers from before the 80s (ex. ENIAC), or cable box stuff (well, they probably don't have much in different hardware than computers, but still),
 * And even other emulators, like MarioNES
 
 However, BIOS/firmware/whatever will not be provided. There will be no recreations or anything like some later Nintendo emulators seem to have.
