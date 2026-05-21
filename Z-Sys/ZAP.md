@@ -1,4 +1,5 @@
 # ZAP
+
 NOTE: EXTREMELY INCOMPLETE (and honestly I have no idea what I'm doing)
 
 ZAP (short for Z-Apps) is an attempt at a cross-architecture Assembly-like language, though it is more C-like (in source code form) if you use the higher-level additions.
@@ -7,8 +8,11 @@ Source code can be compiled into ZAP's own bytecode format (.zap, as I'm sure yo
 
 An app for compiling C to ZAP bytecode may be attempted in the future, possibly along with converters for other Assembly forms (like x86 to ZAP).
 
+2026-05-21: Written ZAP to x86/ARM may be the first thing to come out (or I guess written ZAP to C or some variant)
+
 ## Details on official implementations
-Pretty much ust emulators.
+
+Pretty much just emulators.
 
 ## Source code commands
 ### Direct to bytes
@@ -31,7 +35,7 @@ Pretty much ust emulators.
 | `JMP [var]` | `13` | Jump to location |
 | `JMP_IF [var] [loc]` | `14` | Jump to location if value in given register is true|
 | `JMP_IF_NOT [var] [loc]` | `15` | Jump to location if value in given register is false |
-| `CALL [var]` | `16` | Call another location, like a function |
+| `CALL [loc]` | `16` | Call another location, like a function |
 
 ### Higher level stuff
 
