@@ -58,12 +58,6 @@ Pretty much just emulators.
 | `#meta [detail name] "[value]"` | Thing to add metadata like Windows PE and similar things. Spaces are not allowed in the name. Example use: `#meta ProgramName "whatever"`. |
 | `#meta DebugInfo "[value]"` | Not really a separate thing, just works a bit different, so thought it should get its own row. This can store variable names, function names, or labels and their locations in the code, based on how the value is set here.<br>"value" can contain any of "f" (to keep function names), "v" (to keep variable names), "l" (to keep label names), "c" (to keep class and struct names). You can include multiple options. Anything that's not these will be ignored, since it will probably just be based on whether each is present. |
 
-### SYS
-SYS is the system call one and there is a *lot*, so I gave it its own section
-
-The byte conversions all start with 40, and byte 2 is a category.
-
-| Command | Byte form | Description |
-|---|---|---|
-| `SYS.IO.PRINT` | `00 00` | Print byte directly |
-| `SYS.IO.INPUT` | `00 01` | Text input, like Python's |
+Everything else is going to get a different page
+* [SYS calls](SYS)
+* [standard library](standard), like C has
