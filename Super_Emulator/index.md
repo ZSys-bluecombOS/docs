@@ -4,6 +4,8 @@
 
 Super Emulator is supposed to be a general-purpose, as accurate as possible, "will cover just about anything" kind of emulator.
 
+There's not really a ton I can give here outside of the YAML format below, unless I decided to just dump a ton of random machine documentation and stuff here, which isn't impossible, but I also have something else for that.
+
 ## Inspiration
 
 I believe this project's existence was mostly based on MAME, because I remember not really understanding how to use it. That was a long time ago though.
