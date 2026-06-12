@@ -38,7 +38,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxColor](MtxColor) - converter between different color types, used for `MtxImage` because the values don't have to be capped (except for ones that loop, like HSL Hue) (GUI will be color picker, although more elaborate probably because of the extra color modes instead of only working in RGB)
 * [MtxBytes](MtxBytes) - actually just bytes, like Python's `bytearray` (GUI will be a hex editor, but with extra stuff)
 * [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable) (GUI version, at least, may be similar to Desmos graphing calculator)
----
+* ---
 * [MtxImage](MtxImage) - Image editor (like GIMP)
 * [MtxVector](MtxVector) - Vector image editor (like Inkscape)
 * [MtxFont](MtxFont) - Font editor (like FontStruct) (pixel fonts may be here also, or I may make a separate one)
@@ -47,13 +47,13 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxAudio](MtxAudio) - Audio editor (like Audacity)
 * [MtxMIDI](MtxMIDI) - MIDI editor kind of thing (like some part of FL Studio) (the MediaTrix equivalent of Vocaloid/Utau or whatever will probably be through this since it has the notes form) (also, `MtxMIDI` name may be changed in the future if I come up with something better)
 * [Mtx3D](Mtx3D) - 3D editor (like Blender)
----
+* ---
 * [MtxDocument](MtxDocument) - Document editor (like MS Word)
 * [MtxPresent](MtxPresent) - Presentation editor (like MS PowerPoint)
 * [MtxSheet](MtxSheet) - Spreadsheet editor (like MS Excel)
----
+* ---
 * [MtxGame](MtxGame) - Game engine type of thing (like Unity?) (2D and 3D may be merged together)
----
+* ---
 * [MtxAI](MtxAI) - Local AI app and editor (like Unsloth Studio I think)
 * [MtxHost](MtxHost) - A way to locally host stuff like webpages (like nginx but only to some extent, because (at least for the GUI version) is used to locally host things like AI models or whole MtxProjects (the latter being so you can edit from another device, for example))
 
