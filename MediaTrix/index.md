@@ -35,7 +35,9 @@ You can use the multimedia editors from inside the language itself, somewhat sim
 ## The editors
 
 To note: many of these don't really have anything special, the goal is moreso to match the rest in capability.
-* [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable)
+* [MtxColor](MtxColor) - converter between different color types, used for `MtxImage` because the values don't have to be capped (except for ones that loop, like HSL Hue) (GUI will be color picker, although more elaborate probably because of the extra color modes instead of only working in RGB)
+* [MtxBytes](MtxBytes) - actually just bytes, like Python's `bytearray` (GUI will be a hex editor, but with extra stuff)
+* [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable) (GUI version, at least, may be similar to Desmos graphing calculator)
 ---
 * [MtxImage](MtxImage) - Image editor (like GIMP)
 * [MtxVector](MtxVector) - Vector image editor (like Inkscape)
@@ -54,10 +56,6 @@ To note: many of these don't really have anything special, the goal is moreso to
 ---
 * [MtxAI](MtxAI) - Local AI app and editor (like Unsloth Studio I think)
 * [MtxHost](MtxHost) - A way to locally host stuff like webpages (like nginx but only to some extent, because (at least for the GUI version) is used to locally host things like AI models or whole MtxProjects (the latter being so you can edit from another device, for example))
-
-Note: these don't have GUI stuff as they don't need them (at least to me)
-* [MtxColor](MtxColor) - converter between different color types, used for `MtxImage` because the values don't have to be capped (except for ones that loop, like HSL Hue)
-* [MtxBytes](MtxBytes) - actually just bytes, like Python's `bytearray`
 
 ## GUIs
 
