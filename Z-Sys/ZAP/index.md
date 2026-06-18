@@ -10,12 +10,16 @@ An app for compiling C to ZAP bytecode may be attempted in the future, possibly 
 
 2026-05-21: Written ZAP to x86/ARM may be the first thing to come out (or I guess written ZAP to C or some variant)
 
+2026-06-17: Yeah, ZAP to C
+
 ## Details on official implementations
 
 Pretty much just emulators.
 
 ## Source code commands
 ### Direct to bytes
+
+(Note: the arguments for each are given as the source code version, the byte versions are a little different since they use registers like normal Assembly)
 
 | Command | Byte form | Description |
 |---|---|---|
@@ -36,11 +40,13 @@ Pretty much just emulators.
 | `JMP_IF [var] [loc]` | `14` | Jump to location if value in given register is true|
 | `JMP_IF_NOT [var] [loc]` | `15` | Jump to location if value in given register is false |
 | `CALL [loc]` | `16` | Call another location, like a function |
+| `AND [var] [var]` |
 
 ### Higher level stuff
 
 | Command | Description |
 |---|---|
+| `IF (...) {...}` | Standard if block, can be used instead of JMP_IF in written version (also has ELSEIF/ELSE) |
 | `FOR_RANGE ([variable name], [start], [stop], [step]) {...}` | Standard for loop for ranges |
 | `FOR_ITEM ([variable name], [list or other iterable]) {...}` | Standard for loop for items in a list |
 | `WHILE ([comparison]) {...}` | Standard while loop (comparison will use CMP_xx as you might guess, ex. `WHILE (CMP_EQ [var 1] [var 2]) {...}`) |
@@ -48,6 +54,7 @@ Pretty much just emulators.
 | `FUNCTION [name](...) {...}` | Standard function. |
 | `STRUCT [name](...) {...}` | Ripped straight from C, though with an adjustment: you can set any attribute to be a union of others |
 | `CLASS [name](...) {...}` | Similar thing, except now you get fucntions. Pretty much what you'd imagine |
+| `IMPORT [name]` / `IMPORT [name] AS [other name]` | Regular import statement |
 
 ### Other stuff
 
@@ -60,4 +67,4 @@ Pretty much just emulators.
 
 Everything else is going to get a different page
 * [SYS calls](SYS)
-* [standard library](standard), like C has
+* [other stuff the language has that I previously called the standard library but might just be handled by the compiler, but also might be turned back into a library, I have no idea](standard)

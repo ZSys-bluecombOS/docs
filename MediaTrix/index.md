@@ -59,4 +59,4 @@ To note: many of these don't really have anything special, the goal is moreso to
 
 ## GUIs
 
-Each segment will have a dedicated GUI. However, each will also (maybe) come with a TUI (ex. like how some 90s DOS apps are, and also apps like nano) for things stuck in text mode (it will assume support for ANSI)
+Each segment will have a dedicated GUI. However, each will also (maybe) come with a TUI (ex. like how some 90s DOS apps are, and also apps like nano) for things stuck in text mode
