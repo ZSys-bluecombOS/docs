@@ -60,3 +60,9 @@ To note: many of these don't really have anything special, the goal is moreso to
 ## GUIs
 
 Each segment will have a dedicated GUI. However, each will also (maybe) come with a TUI (ex. like how some 90s DOS apps are, and also apps like nano) for things stuck in text mode
+
+## `mtxout`
+
+*Full documentation: [mtxout](mtxout)*
+
+MediaTrix Output (`.mtxout`) is a specialized XML-like format for storing bundles of files. Primarily, this is used for exporting Projects. However, this is also the format used to save any sort of MediaTrix files (like layer files for image editors, essentially, but used for all formats).
