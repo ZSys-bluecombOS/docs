@@ -18,7 +18,7 @@ If you open the GUI version, this will be the first thing you see. Basically, a 
 
 *Full documentation: [Language](Language)*
 
-The language itself is based somewhat on Lisp (inspired from GIMP's Script-Fu stuff), but only really similar in formatting, as I did also make it from scratch.
+The language itself is based somewhat on Lisp (inspired from GIMP's Script-Fu in particular), but only really similar in formatting, as I did also make it from scratch.
 
 Some examples:
 
@@ -38,6 +38,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxColor](MtxColor) - converter between different color types, used for `MtxImage` because the values don't have to be capped (except for ones that loop, like HSL Hue) (GUI will be color picker, although more elaborate probably because of the extra color modes instead of only working in RGB)
 * [MtxBytes](MtxBytes) - actually just bytes, like Python's `bytearray` (GUI will be a hex editor, but with extra stuff)
 * [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable) (GUI version, at least, may be similar to Desmos graphing calculator)
+* [MtxGUI](MtxGUI) - A basic GUI creator thing (GUI version probably won't be based on anything, but as for details, it will be drag and drop) - also plan to have this be capable of automatically creating TUI and HTML versions of the layout
 * ---
 * [MtxImage](MtxImage) - Image editor (like GIMP)
 * [MtxVector](MtxVector) - Vector image editor (like Inkscape)
