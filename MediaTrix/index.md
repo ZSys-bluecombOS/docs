@@ -56,11 +56,11 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxGame](MtxGame) - Game engine type of thing (like Unity?) (2D and 3D may be merged together)
 * ---
 * [MtxAI](MtxAI) - Local AI app and editor (like Unsloth Studio I think)
-* [MtxHost](MtxHost) - A way to locally host stuff like webpages (like nginx but only to some extent, because (at least for the GUI version) is used to locally host things like AI models or whole MtxProjects (the latter being so you can edit from another device, for example))
+* [MtxHost](MtxHost) - A way to locally host stuff like webpages (like nginx but only to some extent, because it can be used to locally host things like AI models or whole MtxProjects)
 
 ## GUIs
 
-Each segment will have a dedicated GUI. However, each will also (maybe) come with a TUI (ex. like how some 90s DOS apps are, and also apps like nano) for things stuck in text mode
+Each segment will have a dedicated GUI. They will be made in MtxGUI for convenience.
 
 ## `mtxout`
 
