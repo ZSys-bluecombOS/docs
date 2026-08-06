@@ -56,7 +56,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxGame](MtxGame) - Game engine type of thing (like Unity?) (2D and 3D may be merged together)
 * ---
 * [MtxAI](MtxAI) - Local AI app and editor (like Unsloth Studio I think)
-* [MtxHost](MtxHost) - A way to locally host stuff like webpages (like nginx but only to some extent, because it can be used to locally host things like AI models or whole MtxProjects)
+* [MtxWeb](MtxWeb) - Standard web stuff (MtxHost is now MtxWeb.host, original MtxHost description: A way to locally host stuff like webpages (like nginx but only to some extent, because it can be used to locally host things like AI models or whole MtxProjects))
 
 ## GUIs
 
