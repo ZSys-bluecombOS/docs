@@ -1,6 +1,6 @@
 # ZAP
 
-NOTE: EXTREMELY INCOMPLETE (and honestly I have no idea what I'm doing)
+[project on pause because I'm making MediaTrix in Python first and I'll come back to this at some other point]
 
 ZAP (short for Z-Apps) is an attempt at a cross-architecture Assembly-like language, though it is more C-like (in source code form) if you use the higher-level additions.
 
