@@ -6,4 +6,4 @@ All of the class methods revolve around converting between color types. However,
 
 The GUI is a color picker, basically, and will likely be used as one for other editors.
 
-Also, the class itself will be used as the basis for all things related to color in the other editors. The uncapped format is helpful for the other editors, I believe.
+Also, the class itself will be used as the basis for all things related to color in the other editors (ex. as pixels, or colors of things). The uncapped format is helpful for the other editors, I believe.
