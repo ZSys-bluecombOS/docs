@@ -23,7 +23,7 @@ The language itself is based somewhat on Lisp (inspired from GIMP's Script-Fu in
 Some examples:
 
 ```lisp
-(add 1 2) /* Add 1 and 2 */
+(add 1 2) /* Add 1 and 2 - (+ 1 2) would likely be allowed also */
 
 (set_var abc (add 1 2)) /* Set "abc" to 1 + 2 */
 
@@ -40,6 +40,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable) (GUI version, at least, may be similar to Desmos graphing calculator)
 * [MtxGUI](MtxGUI) - A basic GUI creator thing (GUI version probably won't be based on anything, but as for details, it will be drag and drop) - also plan to have this be capable of automatically creating TUI and HTML versions of the layout
 * [MtxFile](MtxFile) - File processing stuff (GUI will be a standard file viewer thing) - Will likely write very few formats, but I want it to be able to read as many as possible
+* [MtxCode](MtxCode) - While this is the name of the MediaTrix language interpreter, it may also include interpreters for various other languages, and translation of them (and maybe even compilation)
 * ---
 * [MtxImage](MtxImage) - Image editor (like GIMP)
 * [MtxVector](MtxVector) - Vector image editor (like Inkscape)
