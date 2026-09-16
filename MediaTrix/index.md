@@ -68,3 +68,9 @@ Each segment will have a dedicated GUI. They will be made in MtxGUI for convenie
 *Full documentation: [mtxout](mtxout)*
 
 MediaTrix Output (`.mtxout`) is a specialized XML-like format for storing bundles of files. Primarily, this is used for exporting Projects. However, this is also the format used to save any sort of MediaTrix files (like layer files for image editors, essentially, but used for all formats).
+
+## MediaTrixOS
+
+A possible modification of Z-Sys with some extras to MediaTrix to make it more productivity-oriented
+
+*Full documentation: [MtxOS](MediaTrixOS)*
