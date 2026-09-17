@@ -10,7 +10,7 @@ MediaTrix is a series of multimedia editors wrapped into a programming language.
 
 ## Projects
 
-*Full documentation: [MtxProject](Projects)*
+*Full documentation: [MtxProject](MtxProject)*
 
 If you open the GUI version, this will be the first thing you see. Basically, a project is a bundle of files. There's more than that, but this is the basic description.
 
