@@ -12,7 +12,7 @@ MediaTrix is a series of multimedia editors wrapped into a programming language.
 
 *Full documentation: [Projects](Projects)*
 
-If you open the GUI version, this will be the first thing you see. Basically, a project is a bundle of files. It's useful because it makes it easier to work with other files, I think. Or will keep them synced better.
+If you open the GUI version, this will be the first thing you see. Basically, a project is a bundle of files. There's more than that, but this is the basic description.
 
 ## The language
 
