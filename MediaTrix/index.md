@@ -1,6 +1,6 @@
 # MediaTrix
 
-[Project status: not started]
+[Project status: Python reference version exists, has almost nothing though]
 
 MediaTrix is a series of multimedia editors wrapped into a programming language.
 
