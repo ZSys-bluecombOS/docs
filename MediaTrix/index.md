@@ -48,7 +48,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxVideo](MtxVideo) - Video editor (like VSDC)
 * [MtxCaps](MtxCaps) - Subtitle editor (I have no examples for this unfortunately)
 * [MtxAudio](MtxAudio) - Audio editor (like Audacity)
-* [MtxMIDI](MtxMIDI) - MIDI editor kind of thing (like some part of FL Studio) (the MediaTrix equivalent of Vocaloid/Utau or whatever will probably be through this since it has the notes form) (also, `MtxMIDI` name may be changed in the future if I come up with something better)
+* [MtxMusic](MtxMusic) - MIDI editor kind of thing (like some part of FL Studio) (the MediaTrix equivalent of Vocaloid/Utau or whatever will probably be through this since it has the notes form) (formerly `MtxMIDI`)
 * [Mtx3D](Mtx3D) - 3D editor (like Blender)
 * ---
 * [MtxDocument](MtxDocument) - Document editor (like MS Word)
