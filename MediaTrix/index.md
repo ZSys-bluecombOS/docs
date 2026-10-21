@@ -27,7 +27,7 @@ Some examples:
 
 (set_var abc (add 1 2)) /* Set "abc" to 1 + 2 */
 
-(randint 1 10 seed=7733) /* Demonstration of optional arguments. This form is only required if they're not sequential, like with Python */
+(randint 1 10 seed=7733) /* Demonstration of optional arguments. This form is only required if they're not sequential, same as Python */
 ```
 
 You can use the multimedia editors from inside the language itself, somewhat similarly to Python's PIL/Pillow, for example
@@ -64,7 +64,7 @@ To note: many of these don't really have anything special, the goal is moreso to
 
 Each segment will have a dedicated GUI. They will be made in MtxGUI for convenience.
 
-## `mtxout`
+## <code>mtxout</code>
 
 *Full documentation: [mtxout](mtxout)*
 

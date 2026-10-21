@@ -1,3 +1,3 @@
 # MtxProject
 
-Projects are the main unit of MediaTrix. While using MediaTrix doesn't require using Projects, I consider it the one thing that ties everything together.
+Projects are the main unit of MediaTrix. They even come with their own version of the command line.
