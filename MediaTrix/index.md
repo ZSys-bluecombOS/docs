@@ -38,8 +38,8 @@ To note: many of these don't really have anything special, the goal is moreso to
 * [MtxColor](MtxColor) - converter between different color types, used for `MtxImage` because the values don't have to be capped (except for ones that loop, like HSL Hue) (GUI will be color picker, although more elaborate probably because of the extra color modes instead of only working in RGB)
 * [MtxBytes](MtxBytes) - actually just bytes, like Python's `bytearray` (GUI will be a hex editor, but with extra stuff)
 * [MtxMath](MtxMath) - Calculator kinda (you can put equations in and then evaluate them with certain values for each variable) (GUI version, at least, may be similar to Desmos graphing calculator)
-* [MtxGUI](MtxGUI) - A basic GUI creator thing (GUI version probably won't be based on anything, but as for details, it will be drag and drop) - also plan to have this be capable of automatically creating TUI and HTML versions of the layout
-* [MtxFile](MtxFile) - File processing stuff (GUI will be a standard file viewer thing) - Will likely write very few formats, but I want it to be able to read as many as possible
+* [MtxGUI](MtxGUI) - A basic GUI creator thing (GUI version probably won't be based on anything, but as for details, it will be drag and drop) - also plan to have this be capable of automatically creating TUI versions of the layout
+* [MtxFile](MtxFile) - File processing stuff (GUI will be a standard file viewer thing) - Will likely write very few formats besides its own (besides bonus library)
 * [MtxCode](MtxCode) - While this segment is primarily the MediaTrix language interpreter, it will also include interpreters for various other languages, and translation + compilation of them
 * ---
 * [MtxImage](MtxImage) - Image editor (like GIMP)
@@ -64,11 +64,21 @@ To note: many of these don't really have anything special, the goal is moreso to
 
 Each segment will have a dedicated GUI. They will be made in MtxGUI for convenience.
 
-## <code>mtxout</code>
+## MediaTrix-specific formats
 
 *Full documentation: [mtxout](mtxout)*
 
-MediaTrix Output (`.mtxout`) is a specialized XML-like format for storing bundles of files. Primarily, this is used for exporting Projects. However, this is also the format used to save any sort of MediaTrix files (like layer files for image editors, essentially, but used for all formats).
+MediaTrix Output (`.mtxout`) is a specialized XML-like format for storing bundles of files. Primarily, this is used for storing and exporting Projects. However, this is also the format used to save any sort of MediaTrix files (like layer files for image editors, essentially, but used for all formats).
+
+*Full documentation: [MON](MON)*
+
+MediaTrix Object Notation is a notation inspired by JSON, but includes types and the ability to fully recreate objects. It is primarily used for "Project Globals", variables that live indepently of any running code and will live update for any code referencing them.
+
+## Bonus library
+
+*Full documentation: [Bonus](Bonus)*
+
+The bonus library will be a giant, official library of not-entirely-important things, including extending MtxCode to many more languages, even some esolangs (and compiling to more and stranger targets), supporting many more file formats (as many as I can), and a handful of random apps that fall (at least somewhat) out of scope.
 
 ## MediaTrixOS
 
